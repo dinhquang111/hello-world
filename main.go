@@ -3,10 +3,13 @@ package main
 import (
 	"fmt"
 	"net/http"
+
+	"github.com/google/uuid"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, World!")
+	id := uuid.New()
+	fmt.Fprintf(w, "Hello, World! %s", id)
 }
 
 func main() {
