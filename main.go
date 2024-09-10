@@ -7,8 +7,9 @@ import (
 	"github.com/google/uuid"
 )
 
+var id = uuid.New()
+
 func handler(w http.ResponseWriter, r *http.Request) {
-	id := uuid.New()
 	fmt.Println("Receive request")
 	fmt.Fprintf(w, "Hello, World! %s", id)
 }

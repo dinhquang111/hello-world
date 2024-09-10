@@ -7,3 +7,6 @@ push:
 		git commit -m $$message; \
 		git push; \
 	"
+
+run:
+	go run main.go
